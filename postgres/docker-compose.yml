@@ -5,9 +5,8 @@ services:
   db:
     image: postgres
     restart: always
-    environment:
-      POSTGRES_PASSWORD: mypass
-
+    env_file:
+      - database.env
   adminer:
     image: adminer
     restart: always
